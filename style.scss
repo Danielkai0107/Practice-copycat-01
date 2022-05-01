@@ -157,7 +157,7 @@ $main_gray: rgb(215, 215, 215);
 		@extend %f-c-c;
 		a {
 			@include a (7em,5.5em);
-			background-image: url('../project-0421/img/logo_pc.png');
+			background-image: url('img/logo_pc.png');
 			@extend %bg-cover;
 			opacity: 1;
 			transition: all 0.5s;
