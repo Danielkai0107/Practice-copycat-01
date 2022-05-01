@@ -1,0 +1,140 @@
+// 置中
+%p-a-c {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+%p-f-c {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+@mixin p-a-c ($a,$b,$c,$d) {
+	position: absolute;
+	left: $a;
+	top: $b;
+	transform: translate($c,$d);
+}
+
+@mixin p-f-c ($a,$b,$c,$d) {
+	position: absolute;
+	left: $a;
+	top: $b;
+	transform: translate($c,$d);
+}
+
+// 左上
+@mixin p-a-lt($a,$b) {
+	position: absolute;
+	left: $a;
+	top: $b ;
+}
+// 左下
+@mixin p-a-lb($a,$b) {
+	position: absolute;
+	left: $a;
+	bottom: $b;
+}
+//右上
+@mixin p-a-rt($a,$b) {
+	position: absolute;
+	right: $a;
+	top: $b ;
+}
+//右下
+@mixin p-a-rb($a,$b) {
+	position: absolute;
+	right: $a;
+	bottom: $b;
+}
+
+//fixed
+
+// 左上
+@mixin p-f-lt($a,$b) {
+	position: fixed;
+	left: $b;
+	top: $a ;
+}
+// 左下
+@mixin p-f-lb($a,$b) {
+	position: fixed;
+	left: $a;
+	bottom: $b;
+}
+//右上
+@mixin p-f-rt($a,$b) {
+	position: fixed;
+	right: $a;
+	top: $b ;
+}
+//右下
+@mixin p-f-rb($a,$b) {
+	position: fixed;
+	right: $a;
+	bottom: $b;
+}
+
+//background 設定
+%bg-contain {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+%bg-cover {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+// 偽元素
+@mixin after-b ($c ,$w, $h, $br, $bgc){
+	content: $c;
+	width: $w;
+	height: $h;
+	border-radius: $br;
+	border: 1px solid $bgc;
+}
+@mixin after-bgc($c,$w,$h,$br,$bgc){
+	content: $c;
+	width: $w;
+	height: $h;
+	border-radius: $br;
+	background-color: $bgc;
+}
+
+//a 連結長寬設定
+@mixin a ($w,$h) {
+	display: inline-block;
+	width: $w;
+	height: $h;
+}
+
+@mixin box ($w,$h,$radius,$color) {
+	display: inline-block;
+	width: $w;
+	height: $h;
+	border-radius: $radius;
+	background-color: $color;
+}
+
+//圖片等比例框
+@mixin img ($x,$y){
+	width: $x;
+	aspect-ratio: $y;
+	object-fit: cover;
+}
+
+//文字
+
+@mixin font($a,$b,$c,$d,$e){
+	font-size: $a;
+	line-height: $b;
+	font-weight: $c;
+	letter-spacing: $d;
+	margin: $e;
+}

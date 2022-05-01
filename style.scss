@@ -1,0 +1,422 @@
+@import 'flex';
+@import 'tools';
+
+$main_red: #FF0100;
+$main_gray: rgb(215, 215, 215);
+
+
+.menu__btn {
+	display: none;
+	@include p-a-lt (5%,1.5rem);
+	height: 40px;
+	width: 40px;
+	cursor: pointer;
+	z-index: 99;
+	span {
+		@include after-bgc ('',20px,2px,3px,$main_red);
+		@extend %p-a-c;
+		&:nth-child(1) {
+			margin-top: -10px;
+		}
+		&:nth-child(2) {
+		}
+		&:nth-child(3) {
+			margin-top: 10px;
+		}
+	}
+}
+
+.active {
+	span {
+		transition: all 0.3s;
+		background-color: #fff;
+		&:nth-child(1) {
+			margin-top: 0;
+			left: 10px;
+			transform: rotate(135deg);
+		}
+		&:nth-child(2) {
+			left: 10px;
+			transform: rotate(135deg);
+		}
+		&:nth-child(3) {
+			margin-top: 0;
+			left: 10px;
+			transform: rotate(225deg);
+		}
+	}
+	&:hover {
+		span {background-color: $main_red;}
+	}
+}
+
+.b {
+	display: none;
+}
+
+.navbar_ph--1 {
+	@include p-a-lt(0,0);
+	height: 100vh;
+	background-color: rgba(42, 42, 42, 0.3);
+	backdrop-filter: saturate(180%) blur(10px);
+	z-index: 30;
+	animation: up 0.9s forwards;
+	.navbar--ph {
+		margin-top: 3rem;
+		animation: op 1.8s forwards;
+		@extend %f-c-c;
+			a {
+				display: block;
+				@include font (1.4em,1.8,400,.2em,1rem 0 .5rem 0);
+				color: aliceblue;
+				transition: all 1.8s;
+				&::after {
+					@include p-a-lt(-30%,0);
+					@include after-bgc("",4px,4px,50%,$main_red);
+				}
+				&:hover {
+					color: $main_red;
+				}
+			}
+	}
+}
+
+@keyframes up {
+	from{
+		height: 0;
+	}
+	to {
+		height: 100vh;
+	}
+}
+@keyframes op {
+	from{
+		opacity: 0;}
+	to {
+		opacity: 1;;
+	}
+}
+
+
+
+.home__line {
+	@include p-f-lt(0,0);
+	background-color: $main_red;
+	width: 8px;
+	height: 100vh;
+	z-index: 20;
+}
+
+.home__btn {
+	@include p-f-rb(50px,50px);
+	display: block;
+	border: 1px solid $main_red;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	z-index: 80;
+	&::after {
+		@extend %p-a-c;
+		content: 'Λ';
+		color: $main_red;
+		font-weight: 100;
+	}
+
+}
+
+.subbar {
+	@extend %f-r-e;
+	padding: 1rem 0;
+	&__title {
+		margin: 0.5rem;
+		a{@include font (1em,3,100,.5em,0 1rem 0 0);}
+	}
+	&__icon {
+		margin: 0.5rem;
+		@include box (3em,3em,50%,$main_gray);
+		transition: all 0.5s;
+		a {
+			@extend %p-a-c;
+			@extend %bg-contain;
+			@include a (1.8em,1.8em);
+		}
+		&--ig{background-image: url('../Icons/Black/instagram-b.svg');}
+		&--fb {background-image: url('../Icons/Black/fb-b.svg');}
+		&:hover {
+			background-color: #fff;
+			border: 1px solid $main_gray;
+		}
+	}
+}
+
+
+.navbar {
+	@extend %f-r-c;
+	margin-top: 2rem;
+	&__logo {
+		@extend %f-c-c;
+		a {
+			@include a (7em,5.5em);
+			background-image: url('../project-0421/img/logo_pc.png');
+			@extend %bg-cover;
+			opacity: 1;
+			transition: all 0.5s;
+			&:hover {
+				opacity: 0.5;
+			}
+		}
+		p {
+			@include font(1em,1.5,100,.2em,1rem 0 0 0);
+			white-space: nowrap;
+		}
+	}
+	&__menu {
+		@extend %f-r-e;
+		padding-top: 5rem;
+		li {
+			a {
+				@include font(1.1em,1.5,400,.2em,0 0 0 2.5rem);
+				transition: all 0.6s;
+				&:hover {
+					color: $main_red;
+				}
+				&::after {
+					@include after-bgc("",4px,4px,50%,$main_red);
+					@include p-a-lt(-20%,-20%);
+				}
+			}
+		}
+	}
+}
+
+
+.header {
+	margin-top: 3rem;
+	overflow: hidden;
+	&__img {
+		margin-left: 30%;
+		img {@include img (100%,4/3);}
+	}
+	&__text {
+		margin-left: 7em;
+		@include p-a-c(0,50%,0,-50%);
+		p {@include font (.85em,1.35,100,.5em,0);}
+		h1 {@include font (2.2em,1.8,100,.2em,2rem 0 0 0);}
+		h2 {@include font (.85em,1.8,100,.2em,2rem 0 2rem 0);}
+	}
+}
+
+.main {
+
+// start sec1
+
+	.sec1 {
+		padding-top: 8rem;
+		&__title {
+			@extend %f-c-c;
+			h1 {
+				@include font (1.2em,1.5,400,.2em,0);
+				&::after {
+					@include after-bgc("",4px,4px,50%,$main_red);
+					@include p-a-lt(-15%,-20%);
+				}
+			}
+			p {@include font (.85em,1.5,100,.2em,1rem 0 0 0);}
+		}
+		&__img {
+			@extend %f-r-s;
+			img {
+				flex: 1;
+				@include img (33.333%,4/3);
+				margin: 3rem;
+			}
+		}
+	}
+
+// start sec2
+
+	.sec2 {
+		padding-top: 8rem;
+		&__title {
+			@extend %f-c-c;
+			h1 {
+				@include font (1.2em,1.5,400,.2em,0);
+				&::after {
+					@include after-bgc("",4px,4px,50%,$main_red);
+					@include p-a-lt(-15%,-20%);
+				}
+			}
+			p {@include font (.85em,1.5,100,.2em,1rem 0 0 0);}
+		}
+		&__text {
+			margin: 0 auto;
+			padding-top: 3rem;
+			h1 {@include font(1.75em,3,100,.1em,0);}
+			p {@include font (1em,2,100,.2em,3rem 0 0 0);}
+		}
+		&__album {
+			@extend %f-r-c;
+			&--img {
+				margin-top: 4rem;
+				img {
+					@include img (100%,8/5);
+				}
+				@media (max-width: 992px) {
+					img {
+						@include img (100%,16/9);
+					}
+				}
+			}
+			&--tx {
+				margin-top: 4rem;
+				p {
+					@include font(0.7em,2,100,.2em,0);
+					color: $main_red;
+				}
+				h1 {
+					@include font (2em,2,100,.2em,1rem 0);}
+				h2 {@include font (.7em,2,100,.2em,0);}
+			}
+		}
+	}
+
+// start sec3
+	.sec3 {
+		padding-top: 8rem;
+		&__title {
+			@extend %f-c-c;
+			h1 {
+				@include font (1.2em,1.5,400,.2em,0);
+				&::after {
+					@include after-bgc("",4px,4px,50%,$main_red);
+					@include p-a-lt(-15%,-20%);
+				}
+			}
+			p {@include font (.85em,1.5,100,.2em,1rem 0 0 0);}
+		}
+		&__list {
+			margin: 5rem auto 0 auto;
+			h5 {@include font(.85em,1.5,100,.2em,1rem 0 0 0);
+				color: #444;
+			}
+			li {
+				@extend %f-r-s;
+				flex-wrap: nowrap;
+				padding: 2rem 0;
+				border-bottom: 1px solid $main_gray;
+				span {@include font(1em,2,500,.2em,0 8rem 0 0);
+				white-space: nowrap}
+				p {@include font(.8em,2,100,.2em,0);}
+			}
+		}
+		&__img {
+			margin-top: 6rem;
+			img {@include img(100%,16/7);}
+		}
+	}
+
+// start sec4
+	.sec4 {
+		padding-top: 8rem;
+		&__title {
+			@extend %f-c-c;
+			h1 {
+				@include font (1.2em,1.5,400,.2em,0);
+				&::after {
+					@include after-bgc("",4px,4px,50%,$main_red);
+					@include p-a-lt(-15%,-20%);
+				}
+			}
+			p {
+				@include font (.85em,1.5,100,.2em,1rem 0 0 0);
+			}
+		}
+		&__text {
+			h1 {@include font (1.1em,1.5,400,.2em,3rem 0 0 0);}
+			p {@include font (.9em,2,300,.22em,1.5rem 0 0 0 );}
+			a {
+				color: $main_red;
+				letter-spacing: 1px;
+				text-decoration: underline;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+		&__cont {
+			@extend %f-r-s;
+			margin-top: 2rem;
+			padding-bottom: 6rem;
+			border-bottom: 1px solid rgb(196, 196, 196);
+			&--1 {@include font (.85em,2,300,.2em,0 5rem 0 .2rem);}
+			&--2 {
+				padding-left: 1rem;
+				&--n {
+					@extend %f-r-c;
+					p {@include font (.9em,2,400,.2em,0 1rem 0 0);}
+				}
+				h5 {@include font (.75em,2,200,.2em,0);}
+			}
+		}
+	}
+}
+
+.footer {
+	&__navbar {
+		padding: 0 0 3rem 0;
+		@extend %f-r-s;
+		&--sub {
+			@extend %f-r-c;
+			.footer__icon {
+				@include box (3em,3em,50%,$main_gray);
+				margin-left: 1rem;
+				transition: all 0.5s;
+				a {
+					@include a (1.8em,1.8em);
+					@extend %p-a-c;
+					@extend %bg-contain;
+				}
+				&--ig{background-image: url('../Icons/Black/instagram-b.svg');}
+				&--fb {background-image: url('../Icons/Black/fb-b.svg');}
+				&:hover {
+					background-color: #fff;
+					border: 1px solid $main_gray;
+				}
+			}
+		}
+		&--menu {
+			@extend %f-r-s;
+			li {
+				@include font (1.1em,1.5,400,.2em,0	);
+				padding: 3rem 1rem;
+				&::after {
+					@include after-bgc("",4px,4px,50%,$main_red);
+					@include p-a-lt(0%,40%);
+				}
+			}
+		}
+
+	}
+	.copy-right {
+		@include font (.9em,1.5,100,.1em,2rem 0 3rem 0);
+		text-align: center;
+	}
+}
+
+
+@media (max-width: 768px) {
+	.menu__btn {display: block;}
+	.navbar__menu {
+		display: none;
+	}
+	.header__img {img{aspect-ratio: 3/4;}}
+	.footer__navbar--menu {
+		justify-content: center;
+	}
+}
+
+@media (min-width: 770px) {
+	.navbar_ph--1 {
+		display: none;
+	}
+}

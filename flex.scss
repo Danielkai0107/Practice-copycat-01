@@ -1,0 +1,73 @@
+//水平排版
+// 置中
+%f-r-c {
+	display: flex;
+	flex-flow: wrap;
+	justify-content: center;
+	align-items: center;
+}
+// 靠左
+%f-r-s {
+	display: flex;
+	flex-flow: wrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+// 靠右
+%f-r-e {
+	display: flex;
+	flex-flow: wrap;
+	justify-content: flex-end;
+	align-items: center;
+}
+// 水平均分
+%f-r-a {
+	display: flex;
+	flex-flow: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+%f-r-b {
+	display: flex;
+	flex-flow: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+//垂直排版
+// 置中
+%f-c-c {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+}
+// 靠左
+%f-c-s {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+// 靠右
+%f-c-e {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: flex-end;
+	align-items: center;
+}
+// 水平均分
+%f-c-a {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+%f-c-b {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-between;
+	align-items: center;
+}
