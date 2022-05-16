@@ -61,7 +61,7 @@
   width: 20px;
   height: 2px;
   border-radius: 3px;
-  background-color: #FF0100;
+  background-color: #ff0100;
 }
 .menu__btn span:nth-child(1) {
   margin-top: -10px;
@@ -89,7 +89,7 @@
   transform: rotate(225deg);
 }
 .active:hover span {
-  background-color: #FF0100;
+  background-color: #ff0100;
 }
 
 .b {
@@ -131,10 +131,10 @@
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background-color: #FF0100;
+  background-color: #ff0100;
 }
 .navbar_ph--1 .navbar--ph a:hover {
-  color: #FF0100;
+  color: #ff0100;
 }
 
 @-webkit-keyframes up {
@@ -174,7 +174,7 @@
   position: fixed;
   left: 0;
   top: 0;
-  background-color: #FF0100;
+  background-color: #ff0100;
   width: 8px;
   height: 100vh;
   z-index: 20;
@@ -185,7 +185,7 @@
   right: 50px;
   bottom: 50px;
   display: block;
-  border: 1px solid #FF0100;
+  border: 1px solid #ff0100;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -193,7 +193,7 @@
 }
 .home__btn::after {
   content: "Λ";
-  color: #FF0100;
+  color: #ff0100;
   font-weight: 100;
 }
 
@@ -242,7 +242,7 @@
   display: inline-block;
   width: 7em;
   height: 5.5em;
-  background-image: url("img/logo_pc.png");
+  background-image: url("../img/logo_pc.png");
   opacity: 1;
   transition: all 0.5s;
 }
@@ -269,14 +269,14 @@
   transition: all 0.6s;
 }
 .navbar__menu li a:hover {
-  color: #FF0100;
+  color: #ff0100;
 }
 .navbar__menu li a::after {
   content: "";
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background-color: #FF0100;
+  background-color: #ff0100;
   position: absolute;
   left: -20%;
   top: -20%;
@@ -339,7 +339,7 @@
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background-color: #FF0100;
+  background-color: #ff0100;
   position: absolute;
   left: -15%;
   top: -20%;
@@ -374,7 +374,7 @@
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background-color: #FF0100;
+  background-color: #ff0100;
   position: absolute;
   left: -15%;
   top: -20%;
@@ -430,7 +430,7 @@
   font-weight: 100;
   letter-spacing: 0.2em;
   margin: 0;
-  color: #FF0100;
+  color: #ff0100;
 }
 .main .sec2__album--tx h1 {
   font-size: 2em;
@@ -461,7 +461,7 @@
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background-color: #FF0100;
+  background-color: #ff0100;
   position: absolute;
   left: -15%;
   top: -20%;
@@ -528,7 +528,7 @@
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background-color: #FF0100;
+  background-color: #ff0100;
   position: absolute;
   left: -15%;
   top: -20%;
@@ -555,7 +555,7 @@
   margin: 1.5rem 0 0 0;
 }
 .main .sec4__text a {
-  color: #FF0100;
+  color: #ff0100;
   letter-spacing: 1px;
   text-decoration: underline;
 }
@@ -632,7 +632,7 @@
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background-color: #FF0100;
+  background-color: #ff0100;
   position: absolute;
   left: 0%;
   top: 40%;
